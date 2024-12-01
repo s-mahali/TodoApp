@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1a1616;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  gap: 3rem;
+  border: 1px solid white;
+}
+
+.heading {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.inputsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#task {
+  width: 80%;
+  padding: 0.5rem;
+  outline: none;
+  color: #2d2d2d;
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 2.5rem;
+}
+#task::placeholder {
+  color: #2d2d2d;
+  font-size: medium;
+}
+#task:focus {
+  box-shadow: 0 0 0 0.2rem rgba(185, 22, 65, 0.25);
+}
+
+#btn {
+  width: 20%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgb(198, 28, 56);
+  color: white;
+  font-size: medium;
+  cursor: pointer;
+  height: 2.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+#btn:hover {
+  opacity: 0.7;
+}
+
+.renderTaskSection {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Parent container for the task form */
+.renderTaskForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #343434;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Task container styling */
+.renderTaskContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  max-width: 400px;
+  background-color: #343434;
+}
+
+.checkbox {
+  transform: scale(1.2);
+  accent-color: #21c076;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-left: 2px;
+  transition: transform 0.2s ease;
+}
+#rendertask {
+  flex-grow: 1;
+  font-size: 1rem;
+  background-color: #343434;
+  color: #e2e2e2;
+  border: none;
+  width: 60%;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* On focus for editing */
+#rendertask:focus {
+  border-color: #198754;
+  background-color: #504c4c;
+  color: #000;
+}
+
+.renderList{
+  flex-grow: 1;
+  flex-wrap: wrap;
+  width:60%;
+  padding:0.5rem;
+  list-style-type: none;
+  color:rgb(203, 198, 198);
+  /* text-align: center; */
+  font-size: larger;  
+  
+
+}
+
+/* Button styling */
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  border: none;
+  cursor: pointer;
+  background: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#delete span {
+  color: rgb(183, 32, 32);
+  font-size: 2rem;
+}
+#edit span {
+  color: rgb(44, 130, 44);
+  font-size: 2rem;
+}
+button:hover {
+  transform: scale(1.05);
+}
